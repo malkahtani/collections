@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ISE_TEST_1Model9.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ISE_TEST_1Model9StoreContainer">
+          <EntitySet Name="Answers" EntityType="ISE_TEST_1Model9.Store.Answers" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Answers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PID" Type="int" />
+          <Property Name="Text" Type="text" />
+          <Property Name="Q_ID" Type="int" Nullable="false" />
+          <Property Name="is_Right" Type="bit" />
+          <Property Name="A_Order" Type="smallint" />
+          <Property Name="value" Type="int" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ISE_TEST_1Model9" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ISE_TEST_1Entities1get_con" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Answers" EntityType="ISE_TEST_1Model9.Answer" />
+        </EntityContainer>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PID" Type="Int32" />
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Q_ID" Type="Int32" Nullable="false" />
+          <Property Name="is_Right" Type="Boolean" />
+          <Property Name="A_Order" Type="Int16" />
+          <Property Name="value" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ISE_TEST_1Model9StoreContainer" CdmEntityContainer="ISE_TEST_1Entities1get_con">
+          <EntitySetMapping Name="Answers"><EntityTypeMapping TypeName="ISE_TEST_1Model9.Answer"><MappingFragment StoreEntitySet="Answers">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="PID" ColumnName="PID" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="Q_ID" ColumnName="Q_ID" />
+            <ScalarProperty Name="is_Right" ColumnName="is_Right" />
+            <ScalarProperty Name="A_Order" ColumnName="A_Order" />
+            <ScalarProperty Name="value" ColumnName="value" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="get _con">
+        <EntityTypeShape EntityType="ISE_TEST_1Model9.Answer" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

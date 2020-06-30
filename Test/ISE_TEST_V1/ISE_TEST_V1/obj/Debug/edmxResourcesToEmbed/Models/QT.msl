@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISE_TEST_1Model5StoreContainer" CdmEntityContainer="QTEntities12">
+    <EntitySetMapping Name="Q_T_R">
+      <EntityTypeMapping TypeName="ISE_TEST_1Model5.Q_T_R">
+        <MappingFragment StoreEntitySet="Q_T_R">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Q_ID" ColumnName="Q_ID" />
+          <ScalarProperty Name="T_ID" ColumnName="T_ID" />
+          <ScalarProperty Name="Q_Type" ColumnName="Q_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

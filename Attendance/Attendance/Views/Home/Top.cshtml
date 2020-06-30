@@ -1,0 +1,47 @@
+﻿@using Telerik.Web.Mvc.UI
+@model Attendance.Models.Top
+
+
+@{
+    ViewBag.Title = "Top";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Top", "Reports", FormMethod.Post, null))
+
+   {
+    
+<table>
+<tr>
+<td> </td>
+</tr>
+<tr><td><h3>From</h3></td><td><h3>TO</h3></td><td><h3>Employees</h3><p>  To select more than one employee hold the Ctrl key and left click the mouse to the next employee name.</p></td></tr>
+<tr>
+<td>
+
+@(Html.Telerik().DatePicker()            .Name("f")            .HtmlAttributes(new { id = "DatePicker_wrapper", style = "margin-bottom: 230px" })    )
+</td>
+<td>
+@(Html.Telerik().DatePicker()            .Name("t")            .HtmlAttributes(new { id = "DatePicker_wrapper", style = "margin-bottom: 230px" })    )
+</td>
+<td>
+@Html.ListBoxFor(x => x.id, new MultiSelectList(ViewBag.Users, "id", "name", Model.id), new { size = "20" }) 
+</td>
+</tr>
+<tr>
+<td>
+<div class="foo">
+
+@Html.EditorFor(model => model.num)
+</div>
+</td>
+<td>
+<input value="Submit" type="submit" />
+
+
+</td>
+</tr>
+</table>
+   }

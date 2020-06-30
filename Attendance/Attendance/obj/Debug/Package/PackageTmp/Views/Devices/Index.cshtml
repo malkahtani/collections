@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Attendance.Models.Devices>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+           <p>Main Door Entrance Device ID</p>
+        </th>
+        <th>
+           <p>Main Door Exit Device ID</p>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.in_date_start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.in_date_stop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.out_date_start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.out_date_stop)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.in_device)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.out_device)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.in_date_start)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.in_date_stop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.out_date_start)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.out_date_stop)
+        </td>
+        <td>
+     
+        </td>
+    </tr>
+}
+
+</table>

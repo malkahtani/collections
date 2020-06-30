@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/Attendance_deploy" />
+  <setParameter name="EventEntities-Web.config Connection String" value="metadata=res://*/Models.Event.csdl|res://*/Models.Event.ssdl|res://*/Models.Event.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.1.2.48\BSSERVER;initial catalog=BioStar;persist security info=True;user id=CrystalUser;password=4test0nlY;multipleactiveresultsets=True;App=EntityFramework&quot;" />
+  <setParameter name="UsersEntities-Web.config Connection String" value="metadata=res://*/Models.Users.csdl|res://*/Models.Users.ssdl|res://*/Models.Users.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.1.2.48\BSSERVER;initial catalog=BioStar;persist security info=True;user id=CrystalUser;password=4test0nlY;multipleactiveresultsets=True;App=EntityFramework&quot;" />
+</parameters>

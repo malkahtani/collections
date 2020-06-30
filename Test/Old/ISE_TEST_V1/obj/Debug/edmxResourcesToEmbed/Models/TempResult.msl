@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISE_TEST_1Model3StoreContainer" CdmEntityContainer="TempResultEntities">
+    <EntitySetMapping Name="Temp_Result">
+      <EntityTypeMapping TypeName="ISE_TEST_1Model3.Temp_Result">
+        <MappingFragment StoreEntitySet="Temp_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="C_T_R_ID" ColumnName="C_T_R_ID" />
+          <ScalarProperty Name="Total_Marks" ColumnName="Total_Marks" />
+          <ScalarProperty Name="User_Marks" ColumnName="User_Marks" />
+          <ScalarProperty Name="N_Q_N_R" ColumnName="N_Q_N_R" />
+          <ScalarProperty Name="N_Q_N_M" ColumnName="N_Q_N_M" />
+          <ScalarProperty Name="N_Q_M" ColumnName="N_Q_M" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

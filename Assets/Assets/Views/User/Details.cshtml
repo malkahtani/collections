@@ -1,0 +1,57 @@
+﻿@model Assets.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>User</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AuthorizedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AuthorizedBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LocationID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LocationID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OwnerName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OwnerName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExternalEmployee)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExternalEmployee)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EmployeeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

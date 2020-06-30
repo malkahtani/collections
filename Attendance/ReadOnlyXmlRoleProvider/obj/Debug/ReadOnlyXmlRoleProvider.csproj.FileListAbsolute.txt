@@ -1,0 +1,5 @@
+C:\Users\m.alkahtani\Documents\GitHub\Xceed\Attendance\ReadOnlyXmlRoleProvider\bin\Debug\ReadOnlyXmlRoleProvider.dll
+C:\Users\m.alkahtani\Documents\GitHub\Xceed\Attendance\ReadOnlyXmlRoleProvider\bin\Debug\ReadOnlyXmlRoleProvider.pdb
+C:\Users\m.alkahtani\Documents\GitHub\Xceed\Attendance\ReadOnlyXmlRoleProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\m.alkahtani\Documents\GitHub\Xceed\Attendance\ReadOnlyXmlRoleProvider\obj\Debug\ReadOnlyXmlRoleProvider.dll
+C:\Users\m.alkahtani\Documents\GitHub\Xceed\Attendance\ReadOnlyXmlRoleProvider\obj\Debug\ReadOnlyXmlRoleProvider.pdb

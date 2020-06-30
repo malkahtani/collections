@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssetManagementNewModel2StoreContainer" CdmEntityContainer="AssetManagementNewEntities2">
+    <EntitySetMapping Name="AssetLocations">
+      <EntityTypeMapping TypeName="AssetManagementNewModel2.AssetLocation">
+        <MappingFragment StoreEntitySet="AssetLocation">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

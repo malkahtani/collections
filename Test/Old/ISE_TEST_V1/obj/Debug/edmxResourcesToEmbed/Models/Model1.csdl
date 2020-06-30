@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISE_TEST_1Model9" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="get_con" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answers" EntityType="ISE_TEST_1Model9.Answer" />
+  </EntityContainer>
+  <EntityType Name="Answer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PID" Type="Int32" />
+    <Property Name="Text" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Q_ID" Type="Int32" Nullable="false" />
+    <Property Name="is_Right" Type="Boolean" />
+    <Property Name="A_Order" Type="Int16" />
+    <Property Name="value" Type="Int32" />
+  </EntityType>
+</Schema>

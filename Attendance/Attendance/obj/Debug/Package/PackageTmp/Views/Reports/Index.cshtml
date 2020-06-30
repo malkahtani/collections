@@ -1,0 +1,155 @@
+﻿@model IEnumerable<Attendance.Models.User_R>
+
+@{
+    ViewBag.Title = "Attendance Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 0;
+    string bgcolor = "";
+    string tempcolor = bgcolor;
+    decimal h = 0;
+    decimal m = 0;
+    string mread = "";
+    string time = "";
+    
+}
+
+<h2>Attendance Report</h2>
+
+
+    <table>
+    <tr>
+        <th>Best Attender</th>
+        <th>Worst Attender</th>
+    </tr>
+    <tr>
+    
+    <td>
+    <table><tr><td>
+    @Model.Last().Batt.name
+    </td></tr>
+    <tr><td><p>Staff Number:
+    @Model.Last().Batt.id
+    </p></td></tr></table>
+    </td>
+    <td>
+    <table><tr><td>
+    @Model.Last().Watt.name
+    </td></tr>
+    <tr><td><p>Staff Number:
+    @Model.Last().Watt.id
+    </p></td></tr></table>
+    </td>
+    
+    </tr>
+</table>
+<table>
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    
+      if (i %2 != 0){
+
+          bgcolor = "efeeef";
+      tempcolor = bgcolor;
+      }
+      else{
+          bgcolor = "efeeef";
+      tempcolor = bgcolor;
+      }
+    i++;
+    
+       <tr style="background: #@bgcolor;">
+       <td >
+        <table>
+        <tr>
+        <th>Name</th>
+        <th>Staff Number</th>
+        </tr>
+        <tr>
+        <td>@item.name</td>
+        <td>@item.id</td>
+        </tr>
+        </table>
+        </td>
+        </tr>      
+        <tr><td>
+        <table style="border-spacing: 2px;">
+        <tr style="background: #@bgcolor;">
+        <th> Attendance</th>
+        </tr>
+        <tr style="background: #@bgcolor;">
+        <th> Day </th>
+        <th> Hours </th>
+        <th> Time Log Entrance </th>
+        <th> Time Log Exit </th>
+        </tr>
+        
+        
+      
+    @foreach (var att in item.attendnace)
+    {
+
+        if (att.CheckedInOrOut)
+        {
+            if (!bgcolor.Contains("FF0000"))
+            {
+                bgcolor = tempcolor;
+            }
+            bgcolor = "FF0000";
+        }
+        else
+        {
+            if (bgcolor.Contains("FF0000"))
+            {
+                bgcolor = tempcolor;
+            }
+        }
+         {
+            h = Math.Floor(att.hours);
+            m = (att.hours - Math.Floor(att.hours)) * 60;
+            if (Math.Floor(m) < 10)
+            {
+                mread = "0" + m.ToString("f0");
+            }
+            else
+            {
+                 mread = m.ToString("f0");
+            }
+            
+             
+            time = h.ToString() + ":" + mread;
+           }
+        <tr style="background: #@bgcolor;" >
+        <td>@att.day</td>
+        <td>@time</td>
+        
+        <td><table style="border-spacing: 0; border-collapse:collapse ; line-height:0px; vertical-align: top;">
+    @foreach (var inlog in att.CheckInLog)
+    {
+          <tr  style="border-spacing: 0; border-collapse:collapse ; line-height:0px; vertical-align: top;"><td><p>Log In: @inlog</p></td></tr>
+  
+    }
+        </table></td>
+        <td><table style="border-spacing: 0; border-collapse:collapse ; line-height:0px; vertical-align: top;">
+   @foreach (var outlog in att.CheckoutLog)
+   {
+          <tr style="border-spacing: 0; border-collapse:collapse ; line-height:0px; vertical-align: top;" ><td><p>Log Out: @outlog</p></td></tr>   
+   }
+        </table></td>
+        
+         </tr>
+}  
+    <tr><td style="background: #FFFFCC;"> Total Hours = @item.total_hours.ToString("f2")</td></tr>
+       </table>
+       
+           <hr />
+    </td>
+       </tr> 
+ }
+ 
+    </table>
+
+ 

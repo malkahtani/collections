@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetsHistory.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AssetsHistoryStoreContainer">
+    <EntitySet Name="Asset_History" EntityType="AssetsHistory.Store.Asset_History" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Asset_History">
+    <Key>
+      <PropertyRef Name="Ass_His_ID" />
+    </Key>
+    <Property Name="Ass_His_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ass_ID" Type="int" Nullable="false" />
+    <Property Name="ITRID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ITR_Eff_Date" Type="date" Nullable="false" />
+    <Property Name="Return_Date" Type="date" />
+    <Property Name="Des" Type="ntext" />
+  </EntityType>
+</Schema>

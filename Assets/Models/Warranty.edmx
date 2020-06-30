@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AssetManagementNewModel4.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AssetManagementNewModel4StoreContainer">
+          <EntitySet Name="Warranty" EntityType="AssetManagementNewModel4.Store.Warranty" store:Type="Tables" store:Schema="dbo" store:Name="Warranty">
+            <DefiningQuery>SELECT 
+      [Warranty].[VendorName] AS [VendorName], 
+      [Warranty].[Priority] AS [Priority], 
+      [Warranty].[WarrantyNumber] AS [WarrantyNumber], 
+      [Warranty].[AssetTypeID] AS [AssetTypeID], 
+      [Warranty].[Model] AS [Model], 
+      [Warranty].[StartDate] AS [StartDate], 
+      [Warranty].[EndDate] AS [EndDate]
+      FROM [dbo].[Warranty] AS [Warranty]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AssetManagementNew.dbo.Warranty' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Warranty">
+          <Key>
+            <PropertyRef Name="VendorName" />
+            <PropertyRef Name="Priority" />
+            <PropertyRef Name="WarrantyNumber" />
+            <PropertyRef Name="AssetTypeID" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="StartDate" />
+            <PropertyRef Name="EndDate" />
+          </Key>
+          <Property Name="VendorName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="WarrantyNumber" Type="int" Nullable="false" />
+          <Property Name="AssetTypeID" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="Model" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="StartDate" Type="int" Nullable="false" />
+          <Property Name="EndDate" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AssetManagementNewModel4" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AssetManagementNewEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Warranties" EntityType="AssetManagementNewModel4.Warranty" />
+        </EntityContainer>
+        <EntityType Name="Warranty">
+          <Key>
+            <PropertyRef Name="VendorName" />
+            <PropertyRef Name="Priority" />
+            <PropertyRef Name="WarrantyNumber" />
+            <PropertyRef Name="AssetTypeID" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="StartDate" />
+            <PropertyRef Name="EndDate" />
+          </Key>
+          <Property Name="VendorName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="WarrantyNumber" Type="Int32" Nullable="false" />
+          <Property Name="AssetTypeID" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="StartDate" Type="Int32" Nullable="false" />
+          <Property Name="EndDate" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AssetManagementNewModel4StoreContainer" CdmEntityContainer="AssetManagementNewEntities4">
+          <EntitySetMapping Name="Warranties">
+            <EntityTypeMapping TypeName="AssetManagementNewModel4.Warranty">
+              <MappingFragment StoreEntitySet="Warranty">
+                <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="WarrantyNumber" ColumnName="WarrantyNumber" />
+                <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Warranty">
+        <EntityTypeShape EntityType="AssetManagementNewModel4.Warranty" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

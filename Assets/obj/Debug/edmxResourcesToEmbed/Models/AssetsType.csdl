@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AsstesType" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AssetsTypeEnt" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Asset_Type" EntityType="AsstesType.Asset_Type" />
+  </EntityContainer>
+  <EntityType Name="Asset_Type">
+    <Key>
+      <PropertyRef Name="Ass_Typ_ID" />
+    </Key>
+    <Property Name="Ass_Typ_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ass_Typ" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Ass_Typ_Des" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

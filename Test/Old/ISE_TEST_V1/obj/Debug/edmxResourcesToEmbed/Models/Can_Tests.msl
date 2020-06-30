@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISE_TEST_1Model2StoreContainer" CdmEntityContainer="Can_TestsEntities">
+    <EntitySetMapping Name="C_T_R">
+      <EntityTypeMapping TypeName="ISE_TEST_1Model2.C_T_R">
+        <MappingFragment StoreEntitySet="C_T_R">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="T_ID" ColumnName="T_ID" />
+          <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+          <ScalarProperty Name="is_submitted" ColumnName="is_submitted" />
+          <ScalarProperty Name="Date_Isu" ColumnName="Date_Isu" />
+          <ScalarProperty Name="Date_to_Set" ColumnName="Date_to_Set" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

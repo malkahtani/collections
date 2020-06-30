@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISE_TEST_1Model9.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ISE_TEST_1Model9StoreContainer">
+    <EntitySet Name="Marks" EntityType="ISE_TEST_1Model9.Store.Marks" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Marks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="C_T_R_ID" Type="int" Nullable="false" />
+    <Property Name="Q_ID" Type="int" Nullable="false" />
+    <Property Name="User_Mark" Type="int" Nullable="false" />
+    <Property Name="AL_ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ISE_TEST_1Model7.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ISE_TEST_1Model7StoreContainer">
+          <EntitySet Name="Result" EntityType="ISE_TEST_1Model7.Store.Result" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="C_T_R_ID" Type="int" Nullable="false" />
+          <Property Name="Total_Marks" Type="float" Nullable="false" />
+          <Property Name="User_Marks" Type="float" Nullable="false" />
+          <Property Name="N_Q_M" Type="int" Nullable="false" />
+          <Property Name="Result" Type="float" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ISE_TEST_1Model7" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Result_1Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Results" EntityType="ISE_TEST_1Model7.Result" />
+        </EntityContainer>
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_T_R_ID" Type="Int32" Nullable="false" />
+          <Property Name="Total_Marks" Type="Double" Nullable="false" />
+          <Property Name="User_Marks" Type="Double" Nullable="false" />
+          <Property Name="N_Q_M" Type="Int32" Nullable="false" />
+          <Property Name="Result1" Type="Double" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ISE_TEST_1Model7StoreContainer" CdmEntityContainer="Result_1Entities1">
+          <EntitySetMapping Name="Results"><EntityTypeMapping TypeName="ISE_TEST_1Model7.Result"><MappingFragment StoreEntitySet="Result">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="C_T_R_ID" ColumnName="C_T_R_ID" />
+            <ScalarProperty Name="Total_Marks" ColumnName="Total_Marks" />
+            <ScalarProperty Name="User_Marks" ColumnName="User_Marks" />
+            <ScalarProperty Name="N_Q_M" ColumnName="N_Q_M" />
+            <ScalarProperty Name="Result1" ColumnName="Result" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Result_1">
+        <EntityTypeShape EntityType="ISE_TEST_1Model7.Result" Width="1.5" PointX="0.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

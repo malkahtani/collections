@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssetsModelStoreContainer" CdmEntityContainer="AssetsEntities1">
+    <EntitySetMapping Name="Check_In">
+      <EntityTypeMapping TypeName="AssetsModel.Check_In">
+        <MappingFragment StoreEntitySet="Check_In">
+          <ScalarProperty Name="IN_Log_ID" ColumnName="IN_Log_ID" />
+          <ScalarProperty Name="Check_in1" ColumnName="Check_in" />
+          <ScalarProperty Name="N_ID" ColumnName="N_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

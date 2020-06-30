@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AssetsModelStoreContainer">
+    <EntitySet Name="Assets" EntityType="AssetsModel.Store.Assets" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Assets">
+    <Key>
+      <PropertyRef Name="Ass_ID" />
+    </Key>
+    <Property Name="Ass_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ass_Serial_No" Type="int" Nullable="false" />
+    <Property Name="Ass_Label" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Ass_Location" Type="int" Nullable="false" />
+    <Property Name="Ass_Type" Type="int" Nullable="false" />
+    <Property Name="OS" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Windows_Key" Type="nvarchar" MaxLength="50" />
+    <Property Name="Des" Type="ntext" />
+    <Property Name="Stauts" Type="bit" />
+  </EntityType>
+</Schema>

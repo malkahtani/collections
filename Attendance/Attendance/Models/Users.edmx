@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Users.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="UsersStoreContainer">
+          <EntitySet Name="TB_USER" EntityType="Users.Store.TB_USER" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="TB_USER">
+          <Key>
+            <PropertyRef Name="nUserIdn" />
+          </Key>
+          <Property Name="nUserIdn" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sUserName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="nDepartmentIdn" Type="int" Nullable="false" />
+          <Property Name="sTelNumber" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="sEmail" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="sUserID" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="sPassword" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="nStartDate" Type="int" Nullable="false" />
+          <Property Name="nEndDate" Type="int" Nullable="false" />
+          <Property Name="nAdminLevel" Type="int" Nullable="false" />
+          <Property Name="nAuthMode" Type="int" Nullable="false" />
+          <Property Name="nAuthLimitCount" Type="int" Nullable="false" />
+          <Property Name="nTimedAPB" Type="int" Nullable="false" />
+          <Property Name="bPassword2" Type="binary" Nullable="false" MaxLength="32" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Users" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="UsersEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_USER" EntityType="Users.TB_USER" />
+        </EntityContainer>
+        <EntityType Name="TB_USER">
+          <Key>
+            <PropertyRef Name="nUserIdn" />
+          </Key>
+          <Property Name="nUserIdn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sUserName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="nDepartmentIdn" Type="Int32" Nullable="false" />
+          <Property Name="sTelNumber" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="sEmail" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="sUserID" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="sPassword" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="nStartDate" Type="Int32" Nullable="false" />
+          <Property Name="nEndDate" Type="Int32" Nullable="false" />
+          <Property Name="nAdminLevel" Type="Int32" Nullable="false" />
+          <Property Name="nAuthMode" Type="Int32" Nullable="false" />
+          <Property Name="nAuthLimitCount" Type="Int32" Nullable="false" />
+          <Property Name="nTimedAPB" Type="Int32" Nullable="false" />
+          <Property Name="bPassword2" Type="Binary" Nullable="false" MaxLength="32" FixedLength="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UsersStoreContainer" CdmEntityContainer="UsersEntities">
+          <EntitySetMapping Name="TB_USER"><EntityTypeMapping TypeName="Users.TB_USER"><MappingFragment StoreEntitySet="TB_USER">
+            <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+            <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+            <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+            <ScalarProperty Name="sTelNumber" ColumnName="sTelNumber" />
+            <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+            <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+            <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+            <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+            <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+            <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+            <ScalarProperty Name="nAuthMode" ColumnName="nAuthMode" />
+            <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+            <ScalarProperty Name="nTimedAPB" ColumnName="nTimedAPB" />
+            <ScalarProperty Name="bPassword2" ColumnName="bPassword2" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Users">
+        <EntityTypeShape EntityType="Users.TB_USER" Width="1.5" PointX="0.75" PointY="0.75" Height="3.7109993489583326" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

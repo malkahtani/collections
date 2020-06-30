@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetsLoc.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AssetsLocStoreContainer">
+    <EntitySet Name="Asset_Loc" EntityType="AssetsLoc.Store.Asset_Loc" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Asset_Loc">
+    <Key>
+      <PropertyRef Name="Ass_Loc_ID" />
+    </Key>
+    <Property Name="Ass_Loc_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ass_Loc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Ass_Loc_Map_Link" Type="ntext" />
+    <Property Name="Ass_Loc_Lat" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ass_Loc_Long" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ass_Loc_Des" Type="nchar" MaxLength="10" />
+  </EntityType>
+</Schema>

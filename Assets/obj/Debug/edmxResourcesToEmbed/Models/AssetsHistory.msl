@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssetsHistoryStoreContainer" CdmEntityContainer="AssetsEntities">
+    <EntitySetMapping Name="Asset_History">
+      <EntityTypeMapping TypeName="AssetsHistory.Asset_History">
+        <MappingFragment StoreEntitySet="Asset_History">
+          <ScalarProperty Name="Ass_His_ID" ColumnName="Ass_His_ID" />
+          <ScalarProperty Name="Ass_ID" ColumnName="Ass_ID" />
+          <ScalarProperty Name="ITRID" ColumnName="ITRID" />
+          <ScalarProperty Name="ITR_Eff_Date" ColumnName="ITR_Eff_Date" />
+          <ScalarProperty Name="Return_Date" ColumnName="Return_Date" />
+          <ScalarProperty Name="Des" ColumnName="Des" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

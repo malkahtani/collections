@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISE_TEST_1Model9StoreContainer" CdmEntityContainer="get_con">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="ISE_TEST_1Model9.Answer">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Q_ID" ColumnName="Q_ID" />
+          <ScalarProperty Name="is_Right" ColumnName="is_Right" />
+          <ScalarProperty Name="A_Order" ColumnName="A_Order" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

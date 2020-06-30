@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AsstesType.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AsstesTypeStoreContainer">
+    <EntitySet Name="Asset_Type" EntityType="AsstesType.Store.Asset_Type" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Asset_Type">
+    <Key>
+      <PropertyRef Name="Ass_Typ_ID" />
+    </Key>
+    <Property Name="Ass_Typ_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ass_Typ" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Ass_Typ_Des" Type="ntext" />
+  </EntityType>
+</Schema>

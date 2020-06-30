@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ATTModel1StoreContainer" CdmEntityContainer="LeaveEntities">
+    <EntitySetMapping Name="Leaves">
+      <EntityTypeMapping TypeName="ATTModel1.Leave">
+        <MappingFragment StoreEntitySet="Leave">
+          <ScalarProperty Name="L_ID" ColumnName="L_ID" />
+          <ScalarProperty Name="LT" ColumnName="LT" />
+          <ScalarProperty Name="Emp_Id" ColumnName="Emp_Id" />
+          <ScalarProperty Name="DFrom" ColumnName="DFrom" />
+          <ScalarProperty Name="DTo" ColumnName="DTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

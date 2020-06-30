@@ -1,0 +1,143 @@
+﻿@model Assets.Models.AssetHistory
+
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>AssetHistory</legend>
+
+            <div class="editor-label">
+            @Html.LabelFor(model => model.LabelID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LabelID)
+            @Html.ValidationMessageFor(model => model.LabelID)
+        </div>
+
+          <div class="editor-label">
+            @Html.LabelFor(model => model.EmployeeID)
+        </div>
+        <div>
+        @Html.DropDownList("EmployeeID", (SelectList)ViewBag.EmployeeID, "--Select One--") 
+        </div>
+     
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LocationID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("LocationID", (SelectList)ViewBag.LocationID, "--Select One--")
+            <div class="editor-label">
+            @Html.LabelFor(model => model.AssetType)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("AssetType", (SelectList)ViewBag.AssetTypeID, "--Select One--")
+           
+        </div>
+           
+       
+        <!--
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LocationID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LocationID)
+            @Html.ValidationMessageFor(model => model.LocationID)
+        </div>
+        -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ITRID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ITRID)
+            @Html.ValidationMessageFor(model => model.ITRID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Replacement)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Replacement)
+            @Html.ValidationMessageFor(model => model.Replacement)
+        </div>
+         </div>
+ 
+        
+     <!--
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AssetType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AssetType)
+            @Html.ValidationMessageFor(model => model.AssetType)
+        </div>
+  -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AuthorizedBy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AuthorizedBy)
+            @Html.ValidationMessageFor(model => model.AuthorizedBy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OwnerName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OwnerName)
+            @Html.ValidationMessageFor(model => model.OwnerName)
+        </div>
+        <!--
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmployeeID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmployeeID)
+            @Html.ValidationMessageFor(model => model.EmployeeID)
+        </div>
+        -->
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OwnerState)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OwnerState)
+            @Html.ValidationMessageFor(model => model.OwnerState)
+        </div>
+
+       <div class="editor-label">
+            @Html.LabelFor(model => model.TimeStamp)
+        </div>
+        <div class="editor-field">
+           
+            @Html.EditorFor(model => model.TimeStamp)
+            @Html.ValidationMessageFor(model => model.TimeStamp)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

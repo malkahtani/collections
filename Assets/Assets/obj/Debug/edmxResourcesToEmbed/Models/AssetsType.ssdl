@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetManagementNewModel3.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AssetManagementNewModel3StoreContainer">
+    <EntitySet Name="AssetType" EntityType="AssetManagementNewModel3.Store.AssetType" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="AssetType">
+    <Key>
+      <PropertyRef Name="AssetTypeID" />
+    </Key>
+    <Property Name="AssetTypeID" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="AssetType" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+</Schema>

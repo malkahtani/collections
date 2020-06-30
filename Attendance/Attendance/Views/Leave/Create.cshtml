@@ -1,0 +1,73 @@
+﻿@using Telerik.Web.Mvc.UI
+@model Attendance.Models.Leave
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Leave</legend>
+
+        <div class="editor-label">
+           Leave Type
+        </div>
+        <div class="editor-field">
+             @Html.DropDownListFor(m => m.LT, new SelectList(ViewBag.LeaveType, "LT_ID", "LT_Name"))
+        </div>
+        
+        <div class="editor-label">
+        <table>
+        <tr><td>Type the employee number and the name will appear on right</td></tr> 
+        <tr> 
+        <th>  Emplyee ID</th>
+        <th>Employee Name</th>
+        </tr>
+        <tr>
+        <td>
+            @Html.EditorFor(model => model.Emp_Id)
+            @Html.ValidationMessageFor(model => model.Emp_Id)
+            </td>
+            <td>
+            <span id="result" />
+            </td>
+            </tr>
+            </table>
+        </div>
+        <div>
+        <table><tr><th>Leave Start from Date</th><th>Leave End Date</th></tr><tr>
+        <td> @(Html.Telerik().DatePicker().Name("DFrom").HtmlAttributes(new { id = "DatePicker_wrapper", style = "margin-bottom: 230px" }))</td>
+        <td> @(Html.Telerik().DatePicker().Name("DTo").HtmlAttributes(new { id = "DatePicker_wrapper", style = "margin-bottom: 230px" }))</td>
+        </tr></table>
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/jscript">
+        $('#Emp_Id').blur(function () {
+            var url = "/Leave/CheckUserName";
+            var name = $('#Emp_Id').val();
+            $.get(url, { input: name }, function (data) {
+                
+                    $("#result").html(data);
+                    
+                
+            });
+        })
+    </script>
+
+}

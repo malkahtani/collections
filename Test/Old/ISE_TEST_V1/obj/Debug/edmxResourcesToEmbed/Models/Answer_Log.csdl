@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISE_TEST_1Model8" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Answer_Log" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answers_Log" EntityType="ISE_TEST_1Model8.Answers_Log" />
+  </EntityContainer>
+  <EntityType Name="Answers_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_T_R_ID" Type="Int32" Nullable="false" />
+    <Property Name="Q_ID" Type="Int32" Nullable="false" />
+    <Property Name="A_ID" Type="Int32" Nullable="false" />
+    <Property Name="Text" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="is_marked" Type="Boolean" />
+    <Property Name="need_rev" Type="Boolean" />
+    <Property Name="PID" Type="Int32" />
+    <Property Name="Date_Submitted" Type="DateTime" />
+    <Property Name="value" Type="Int32" />
+    <Property Name="is_right" Type="Boolean" />
+    <Property Name="is_wrong" Type="Boolean" />
+    <Property Name="is_answered" Type="Boolean" />
+  </EntityType>
+</Schema>

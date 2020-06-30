@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetManagementNewModel4.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AssetManagementNewModel4StoreContainer">
+    <EntitySet Name="Warranty" EntityType="AssetManagementNewModel4.Store.Warranty" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Warranty">
+    <Key>
+      <PropertyRef Name="WarrantyNumber" />
+    </Key>
+    <Property Name="VendorName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="WarrantyNumber" Type="int" Nullable="false" />
+    <Property Name="AssetTypeID" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="Model" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="StartDate" Type="int" Nullable="false" />
+    <Property Name="EndDate" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

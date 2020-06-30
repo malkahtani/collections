@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssetManagementNewModel4StoreContainer" CdmEntityContainer="AssetManagementNewEntities4">
+    <EntitySetMapping Name="Warranties">
+      <EntityTypeMapping TypeName="AssetManagementNewModel4.Warranty">
+        <MappingFragment StoreEntitySet="Warranty">
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="WarrantyNumber" ColumnName="WarrantyNumber" />
+          <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

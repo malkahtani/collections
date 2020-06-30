@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BioStarModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BioStarModelStoreContainer">
+    <EntitySet Name="TB_EVENT_LOG" EntityType="BioStarModel.Store.TB_EVENT_LOG" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="TB_EVENT_LOG">
+    <Key>
+      <PropertyRef Name="nDateTime" />
+      <PropertyRef Name="nReaderIdn" />
+      <PropertyRef Name="nEventIdn" />
+      <PropertyRef Name="nUserID" />
+    </Key>
+    <Property Name="nEventLogIdn" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nDateTime" Type="int" Nullable="false" />
+    <Property Name="nReaderIdn" Type="int" Nullable="false" />
+    <Property Name="nEventIdn" Type="int" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+    <Property Name="nIsLog" Type="smallint" Nullable="false" />
+    <Property Name="nTNAEvent" Type="smallint" Nullable="false" />
+    <Property Name="nIsUseTA" Type="smallint" Nullable="false" />
+    <Property Name="nType" Type="smallint" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetsHistory" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AssetsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Asset_History" EntityType="AssetsHistory.Asset_History" />
+  </EntityContainer>
+  <EntityType Name="Asset_History">
+    <Key>
+      <PropertyRef Name="Ass_His_ID" />
+    </Key>
+    <Property Name="Ass_His_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ass_ID" Type="Int32" Nullable="false" />
+    <Property Name="ITRID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ITR_Eff_Date" Type="DateTime" Nullable="false" />
+    <Property Name="Return_Date" Type="DateTime" />
+    <Property Name="Des" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

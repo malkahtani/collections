@@ -1,0 +1,77 @@
+﻿@model Attendance.Models.Devices
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Devices</legend>
+
+        <div class="editor-label">
+            <p>The ID of Main Door Entrance device</p>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.in_device)
+            @Html.ValidationMessageFor(model => model.in_device)
+        </div>
+
+        <div class="editor-label">
+            <p>The ID of Main Door Exite device</p>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.out_device)
+            @Html.ValidationMessageFor(model => model.out_device)
+        </div>
+
+        <div class="editor-label">
+            <p>The date the Main Door Entrance device start to be used in American format mm/dd/yyyy</p>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.in_date_start)
+            @Html.ValidationMessageFor(model => model.in_date_start)
+        </div>
+
+        <div class="editor-label">
+            <p>The date the Main Door Entrance device stop to be used in American format mm/dd/yyyy if the device is workin type "now" without the quotation marks</p>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.in_date_stop)
+            @Html.ValidationMessageFor(model => model.in_date_stop)
+        </div>
+
+        <div class="editor-label">
+             <p>The date the Main Door Exit device start to be used in American format mm/dd/yyyy</p>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.out_date_start)
+            @Html.ValidationMessageFor(model => model.out_date_start)
+        </div>
+
+        <div class="editor-label">
+            <p>The date the Main Door Exit device stop to be used in American format mm/dd/yyyy if the device is workin type "now" without the quotation marks</p>
+        
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.out_date_stop)
+            @Html.ValidationMessageFor(model => model.out_date_stop)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,106 @@
+﻿@model Assets.Models.Asset
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Asset</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AssetTypeID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AssetTypeID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LocationID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LocationID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmployeeID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmployeeID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ITRID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ITRID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Replacement)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Replacement)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SerialNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SerialNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Windows_Key)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Windows_Key)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Model)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Model)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TimeStamp)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TimeStamp)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.History)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.History)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.LabelID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

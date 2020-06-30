@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UsersStoreContainer" CdmEntityContainer="UsersEntities">
+    <EntitySetMapping Name="TB_USER">
+      <EntityTypeMapping TypeName="Users.TB_USER">
+        <MappingFragment StoreEntitySet="TB_USER">
+          <ScalarProperty Name="nUserIdn" ColumnName="nUserIdn" />
+          <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+          <ScalarProperty Name="nDepartmentIdn" ColumnName="nDepartmentIdn" />
+          <ScalarProperty Name="sTelNumber" ColumnName="sTelNumber" />
+          <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+          <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+          <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+          <ScalarProperty Name="nStartDate" ColumnName="nStartDate" />
+          <ScalarProperty Name="nEndDate" ColumnName="nEndDate" />
+          <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+          <ScalarProperty Name="nAuthMode" ColumnName="nAuthMode" />
+          <ScalarProperty Name="nAuthLimitCount" ColumnName="nAuthLimitCount" />
+          <ScalarProperty Name="nTimedAPB" ColumnName="nTimedAPB" />
+          <ScalarProperty Name="bPassword2" ColumnName="bPassword2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

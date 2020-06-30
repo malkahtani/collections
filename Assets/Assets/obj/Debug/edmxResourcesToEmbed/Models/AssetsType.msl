@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssetManagementNewModel3StoreContainer" CdmEntityContainer="AssetManagementNewEntities3">
+    <EntitySetMapping Name="AssetTypes">
+      <EntityTypeMapping TypeName="AssetManagementNewModel3.AssetType">
+        <MappingFragment StoreEntitySet="AssetType">
+          <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+          <ScalarProperty Name="AssetType1" ColumnName="AssetType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

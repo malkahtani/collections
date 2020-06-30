@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISE_TEST_1Model8StoreContainer" CdmEntityContainer="Answer_Log">
+    <EntitySetMapping Name="Answers_Log">
+      <EntityTypeMapping TypeName="ISE_TEST_1Model8.Answers_Log">
+        <MappingFragment StoreEntitySet="Answers_Log">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="C_T_R_ID" ColumnName="C_T_R_ID" />
+          <ScalarProperty Name="Q_ID" ColumnName="Q_ID" />
+          <ScalarProperty Name="A_ID" ColumnName="A_ID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="is_marked" ColumnName="is_marked" />
+          <ScalarProperty Name="need_rev" ColumnName="need_rev" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Date_Submitted" ColumnName="Date_Submitted" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="is_right" ColumnName="is_right" />
+          <ScalarProperty Name="is_wrong" ColumnName="is_wrong" />
+          <ScalarProperty Name="is_answered" ColumnName="is_answered" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

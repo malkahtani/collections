@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Attendance.Models.TopV>
+
+@{
+    ViewBag.Title = "Top";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Top @Model.ElementAt(0).Bot.Count()</h2>
+
+
+<table>
+    <tr>
+        <th>Employee ID</th>
+        <th>&nbsp;&nbsp;  Employee Name</th>
+        <th>Total Hours</th>
+    </tr>
+
+@for(int x= 0; x<Model.ElementAt(0).Top.Count; x++) {
+    
+    <tr>
+    <td>
+         @Model.ElementAt(0).Top.ElementAt(x).id
+        </td>
+        <td>
+         @Model.ElementAt(0).Top.ElementAt(x).name
+        </td>
+        <td>
+         @Model.ElementAt(0).Top.ElementAt(x).hours.ToString("f2")
+        </td>
+    </tr>
+   
+}
+
+</table>
+<h2> Worst  @Model.ElementAt(0).Bot.Count()</h2>
+<table>
+    <tr>
+        <th>Employee ID</th>
+        <th>&nbsp;&nbsp;  Employee Name</th>
+        <th>Total Hours</th>
+    </tr>
+
+@for(int x= 0; x<Model.ElementAt(0).Bot.Count; x++) {
+    
+    <tr>
+    <td>
+         @Model.ElementAt(0).Bot.ElementAt(x).id
+        </td>
+        <td>
+         @Model.ElementAt(0).Bot.ElementAt(x).name
+        </td>
+        <td>
+         @Model.ElementAt(0).Bot.ElementAt(x).hours.ToString("f2")
+        </td>
+    </tr>
+   
+}
+
+</table>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Devices>
+  <Device>
+    <in>38262</in>
+    <out>38267</out>
+    <infrom>09/01/2012</infrom>
+    <into>now</into>
+    <outfrom>09/01/2012</outfrom>
+    <outto>now</outto>
+  </Device>
+  <Device>
+    <in>54631</in>
+    <out>54630</out>
+    <infrom>01/10/2011</infrom>
+    <into>01/19/2012</into>
+    <outfrom>01/10/2011</outfrom>
+    <outto>11/24/2011</outto>
+  </Device>
+  
+</Devices>

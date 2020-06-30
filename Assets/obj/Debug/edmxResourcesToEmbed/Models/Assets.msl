@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssetsModelStoreContainer" CdmEntityContainer="Assets">
+    <EntitySetMapping Name="Assets">
+      <EntityTypeMapping TypeName="AssetsModel.Asset">
+        <MappingFragment StoreEntitySet="Assets">
+          <ScalarProperty Name="Ass_ID" ColumnName="Ass_ID" />
+          <ScalarProperty Name="Ass_Serial_No" ColumnName="Ass_Serial_No" />
+          <ScalarProperty Name="Ass_Label" ColumnName="Ass_Label" />
+          <ScalarProperty Name="Ass_Location" ColumnName="Ass_Location" />
+          <ScalarProperty Name="Ass_Type" ColumnName="Ass_Type" />
+          <ScalarProperty Name="OS" ColumnName="OS" />
+          <ScalarProperty Name="Windows_Key" ColumnName="Windows_Key" />
+          <ScalarProperty Name="Des" ColumnName="Des" />
+          <ScalarProperty Name="Stauts" ColumnName="Stauts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

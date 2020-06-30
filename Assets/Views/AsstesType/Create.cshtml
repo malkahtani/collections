@@ -1,0 +1,44 @@
+﻿@model Assets.Models.Asset_Type
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Asset_Type</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ass_Typ)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Ass_Typ)
+            @Html.ValidationMessageFor(model => model.Ass_Typ)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ass_Typ_Des)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Ass_Typ_Des)
+            @Html.ValidationMessageFor(model => model.Ass_Typ_Des)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

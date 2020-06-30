@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssetsLocStoreContainer" CdmEntityContainer="AssetsLocation">
+    <EntitySetMapping Name="Asset_Loc">
+      <EntityTypeMapping TypeName="AssetsLoc.Asset_Loc">
+        <MappingFragment StoreEntitySet="Asset_Loc">
+          <ScalarProperty Name="Ass_Loc_ID" ColumnName="Ass_Loc_ID" />
+          <ScalarProperty Name="Ass_Loc" ColumnName="Ass_Loc" />
+          <ScalarProperty Name="Ass_Loc_Map_Link" ColumnName="Ass_Loc_Map_Link" />
+          <ScalarProperty Name="Ass_Loc_Lat" ColumnName="Ass_Loc_Lat" />
+          <ScalarProperty Name="Ass_Loc_Long" ColumnName="Ass_Loc_Long" />
+          <ScalarProperty Name="Ass_Loc_Des" ColumnName="Ass_Loc_Des" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

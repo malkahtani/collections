@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISE_TEST_1Model9StoreContainer" CdmEntityContainer="Marks_dbEntities">
+    <EntitySetMapping Name="Marks">
+      <EntityTypeMapping TypeName="ISE_TEST_1Model9.Mark">
+        <MappingFragment StoreEntitySet="Marks">
+          <ScalarProperty Name="C_T_R_ID" ColumnName="C_T_R_ID" />
+          <ScalarProperty Name="Q_ID" ColumnName="Q_ID" />
+          <ScalarProperty Name="User_Mark" ColumnName="User_Mark" />
+          <ScalarProperty Name="AL_ID" ColumnName="AL_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,47 @@
+﻿@model Attendance.Models.Leave
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Leave</legend>
+
+    <div class="display-label">
+         Leave Type
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LT)
+    </div>
+
+    <div class="display-label">
+        Employee ID
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Emp_Id)
+    </div>
+
+    <div class="display-label">
+         Start from Date 
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DFrom)
+    </div>
+
+    <div class="display-label">
+         End Date
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DTo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

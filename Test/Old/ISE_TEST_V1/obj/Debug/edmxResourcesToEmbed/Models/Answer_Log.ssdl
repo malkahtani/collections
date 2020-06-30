@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISE_TEST_1Model8.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ISE_TEST_1Model8StoreContainer">
+    <EntitySet Name="Answers_Log" EntityType="ISE_TEST_1Model8.Store.Answers_Log" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Answers_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="C_T_R_ID" Type="int" Nullable="false" />
+    <Property Name="Q_ID" Type="int" Nullable="false" />
+    <Property Name="A_ID" Type="int" Nullable="false" />
+    <Property Name="Text" Type="text" />
+    <Property Name="is_marked" Type="bit" />
+    <Property Name="need_rev" Type="bit" />
+    <Property Name="PID" Type="int" />
+    <Property Name="Date_Submitted" Type="datetime" />
+    <Property Name="value" Type="int" />
+    <Property Name="is_right" Type="bit" />
+    <Property Name="is_wrong" Type="bit" />
+    <Property Name="is_answered" Type="bit" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Attendance.Models.LeaveType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Leave Type
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LT_Name)
+        </td>
+        <td>
+           @Html.ActionLink("Delete", "Delete", new { id=item.LT_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISE_TEST_1Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Tests_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tests" EntityType="ISE_TEST_1Model.Test" />
+  </EntityContainer>
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Duration" Type="Int16" Nullable="false" />
+    <Property Name="N_Q_TF" Type="Int16" />
+    <Property Name="N_Q_MCSA" Type="Int16" />
+    <Property Name="N_Q_MCMA" Type="Int16" />
+    <Property Name="N_Q_FGS" Type="Int16" />
+    <Property Name="N_Q_FGI" Type="Int16" />
+    <Property Name="N_Q_MT" Type="Int16" />
+    <Property Name="N_Q_SA" Type="Int16" />
+    <Property Name="N_Q_EA" Type="Int16" />
+    <Property Name="valid" Type="Boolean" />
+  </EntityType>
+</Schema>

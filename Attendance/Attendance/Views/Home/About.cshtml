@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+
+
+<article>
+   <p>
+        This is  a tool to generate simple report for the attendance log.
+    </p>
+
+    <p>
+        If one of the days background is red that's mean the employee didn't use his card for entrance or exit or it means that the employee stay till next day 12:00 or later, this will cause the system to mark two days in red .
+    </p>
+
+    <p>
+        The days in red will included the latest login and the earliest logout in the best/worst attender calculation and the number of hours that was attended will be sum of periods between login and log out.
+
+    </p>
+    <p>For example if someone checked in at 8 and checked in at 10 then checked out at 12 the system will calculate the period between 10 and 12 and will ignore the checked in at 8.</p>
+    <p>Another example is if someone checked in at 8 then checked out at 10 then checked out at 12. the system will calculate the period between 8 and 10 and will ignore the 12. </p>
+    <p>If someone checked in today and checked after 12:00 AM the system will ignore the checked out in the other day.</p>
+
+
+
+</article>
+
+<aside>
+    <h3>Links</h3>
+    <p>
+        
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

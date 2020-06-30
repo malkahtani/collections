@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetManagementNewModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AssetManagementNewModelStoreContainer">
+    <EntitySet Name="Asset" EntityType="AssetManagementNewModel.Store.Asset" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="LabelID" />
+    </Key>
+    <Property Name="LabelID" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="AssetTypeID" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="LocationID" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="EmployeeID" Type="nvarchar" MaxLength="10" />
+    <Property Name="ITRID" Type="nvarchar" MaxLength="15" />
+    <Property Name="Replacement" Type="bit" Nullable="false" />
+    <Property Name="SerialNo" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="OS" Type="nvarchar" MaxLength="15" />
+    <Property Name="Windows Key" Type="nvarchar" MaxLength="15" />
+    <Property Name="ProductNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="Model" Type="nvarchar" MaxLength="25" />
+    <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="History" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AssetsEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Check_In" EntityType="AssetsModel.Check_In" />
+  </EntityContainer>
+  <EntityType Name="Check_In">
+    <Key>
+      <PropertyRef Name="IN_Log_ID" />
+    </Key>
+    <Property Name="IN_Log_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Check_in1" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="N_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9EB0B520-3A63-4AB1-B21C-B7675670764B}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISE_TEST_V1</RootNamespace>
+    <AssemblyName>ISE_TEST_V1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Mvc, Version=2010.2.825.235, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CandidateController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MarksController.cs" />
+    <Compile Include="Controllers\ResultController.cs" />
+    <Compile Include="Models\Answers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Answers.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Answer_Log.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Answer_Log.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EA.cs" />
+    <Compile Include="Models\EAAnswer.cs" />
+    <Compile Include="Models\FGI.cs" />
+    <Compile Include="Models\FGIAnswer.cs" />
+    <Compile Include="Models\FGS.cs" />
+    <Compile Include="Models\FGSAnswer.cs" />
+    <Compile Include="Models\List_AL.cs" />
+    <Compile Include="Models\MAnswer.cs" />
+    <Compile Include="Models\MAnswer_Log.cs" />
+    <Compile Include="Models\mark.cs" />
+    <Compile Include="Models\Marks.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Marks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Marks_db.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Marks_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Marks_db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Marks_db.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MCMA.cs" />
+    <Compile Include="Models\MCMAAnswer.cs" />
+    <Compile Include="Models\MCSA.cs" />
+    <Compile Include="Models\MCSAAnswer.cs" />
+    <Compile Include="Models\MMarks.cs" />
+    <Compile Include="Models\MQuestion.cs" />
+    <Compile Include="Models\MT.cs" />
+    <Compile Include="Models\MTAnswer.cs" />
+    <Compile Include="Models\QT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QT.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuestionsClass.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="Controllers\TempResultController.cs" />
+    <Compile Include="Controllers\TestsController.cs" />
+    <Compile Include="Models\Result_1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Result_1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SA.cs" />
+    <Compile Include="Models\SAAnswer.cs" />
+    <Compile Include="Models\TF.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Candidate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Candidate.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Can_Tests.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Can_Tests.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TempResult.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TempResult.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tests.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tests.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TFAnswer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\C_T_IndexViewModel.cs" />
+    <Compile Include="ViewModels\C_T_ViewModel.cs" />
+    <Compile Include="ViewModels\EA_VM.cs" />
+    <Compile Include="ViewModels\FGI_VM.cs" />
+    <Compile Include="ViewModels\FGS_VM.cs" />
+    <Compile Include="ViewModels\MarksIndexView.cs" />
+    <Compile Include="ViewModels\MarksView.cs" />
+    <Compile Include="ViewModels\MCMA_VM.cs" />
+    <Compile Include="ViewModels\MCSA_VM.cs" />
+    <Compile Include="ViewModels\MT_VM.cs" />
+    <Compile Include="ViewModels\QQ.cs" />
+    <Compile Include="ViewModels\QuestionsIndex.cs" />
+    <Compile Include="ViewModels\Q_T_IndexViewModel.cs" />
+    <Compile Include="ViewModels\Result_Details.cs" />
+    <Compile Include="ViewModels\SA_VM.cs" />
+    <Compile Include="ViewModels\Temp_Result_Details.cs" />
+    <Compile Include="ViewModels\TF_VM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\ise-1.gif" />
+    <Content Include="Content\ise.gif" />
+    <Content Include="Content\jquery.autocomplete.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery.autocomplete.js" />
+    <Content Include="Views\Candidate\Create.aspx" />
+    <Content Include="Views\Candidate\C_T.aspx" />
+    <Content Include="Views\Candidate\Delete.aspx" />
+    <Content Include="Views\Candidate\Deleted.aspx" />
+    <Content Include="Views\Candidate\Details.aspx" />
+    <Content Include="Views\Candidate\Edit.aspx" />
+    <Content Include="Views\Candidate\Error.aspx" />
+    <Content Include="Views\Candidate\Index.aspx" />
+    <Content Include="Views\Candidate\C_Details.aspx" />
+    <Content Include="Views\Candidate\C_List.aspx" />
+    <Content Include="Views\Candidate\Linked.aspx" />
+    <Content Include="Views\Candidate\notfound.aspx" />
+    <Content Include="Views\Candidate\Test.aspx" />
+    <Content Include="Views\Marks\Go_Marks.aspx" />
+    <Content Include="Views\Marks\Index.aspx" />
+    <Content Include="Views\Marks\Mark.aspx" />
+    <Content Include="Views\Questions\Delete.aspx" />
+    <Content Include="Views\Questions\Deleted.aspx" />
+    <Content Include="Views\Questions\EA.aspx" />
+    <Content Include="Views\Questions\EA_Add.aspx" />
+    <Content Include="Views\Questions\FGI.aspx" />
+    <Content Include="Views\Questions\FGI_Add.aspx" />
+    <Content Include="Views\Questions\FGS.aspx" />
+    <Content Include="Views\Questions\FGS_Add.aspx" />
+    <Content Include="Views\Questions\Index.aspx" />
+    <Content Include="Views\Questions\Link_To_Test.aspx" />
+    <Content Include="Views\Questions\Test.aspx" />
+    <Content Include="Views\Questions\Linked.aspx" />
+    <Content Include="Views\Questions\MCMA.aspx" />
+    <Content Include="Views\Questions\MCMA_Add.aspx" />
+    <Content Include="Views\Questions\MCSA.aspx" />
+    <Content Include="Views\Questions\MCSA_ADD.aspx" />
+    <Content Include="Views\Questions\MT.aspx" />
+    <Content Include="Views\Questions\MT_Add.aspx" />
+    <Content Include="Views\Questions\Q_T.aspx" />
+    <Content Include="Views\Questions\SA.aspx" />
+    <Content Include="Views\Questions\SA_Add.aspx" />
+    <Content Include="Views\Questions\TF.aspx" />
+    <Content Include="Views\Questions\TF_Add.aspx" />
+    <Content Include="Views\Questions\ViewPage1.aspx" />
+    <Content Include="Views\Result\C_Details.aspx" />
+    <Content Include="Views\Result\C_List.aspx" />
+    <Content Include="Views\Result\Index.aspx" />
+    <Content Include="Views\TempResult\C_Details.aspx" />
+    <Content Include="Views\TempResult\C_List.aspx" />
+    <Content Include="Views\TempResult\Index.aspx" />
+    <Content Include="Views\Tests\Create.aspx" />
+    <Content Include="Views\Tests\Delete.aspx" />
+    <Content Include="Views\Tests\Deleted.aspx" />
+    <Content Include="Views\Tests\Details.aspx" />
+    <Content Include="Views\Tests\Edit.aspx" />
+    <Content Include="Views\Tests\Index.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Tests.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Tests.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Candidate.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Candidate.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Can_Tests.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Can_Tests.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\TempResult.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TempResult.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Questions.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Questions.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Answers.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Answers.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\QT.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QT.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Answer_Log.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Answer_Log.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Result_1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Result_1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Marks.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Marks.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Models\Marks_db.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Marks_db.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Marks_db.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Marks_db.cs</LastGenOutput>
+    </None>
+    <None Include="UML.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1229</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

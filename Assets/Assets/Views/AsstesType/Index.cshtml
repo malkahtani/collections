@@ -1,0 +1,48 @@
+﻿<!-- index -->
+
+@model IEnumerable<Assets.Models.AssetType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+         ID
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetType1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+    <td>
+     @Html.DisplayFor(modelItem => item.AssetTypeID)
+    </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssetType1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AssetTypeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AssetTypeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AssetTypeID })
+        </td>
+    </tr>
+}
+
+</table>

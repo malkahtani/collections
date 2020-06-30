@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISE_TEST_1Model2.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ISE_TEST_1Model2StoreContainer">
+    <EntitySet Name="C_T_R" EntityType="ISE_TEST_1Model2.Store.C_T_R" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="C_T_R">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="T_ID" Type="int" Nullable="false" />
+    <Property Name="C_ID" Type="int" Nullable="false" />
+    <Property Name="is_submitted" Type="bit" Nullable="false" />
+    <Property Name="Date_Isu" Type="datetime" />
+    <Property Name="Date_to_Set" Type="datetime" />
+  </EntityType>
+</Schema>

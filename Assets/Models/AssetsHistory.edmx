@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AssetsHistory.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AssetsHistoryStoreContainer">
+          <EntitySet Name="Asset_History" EntityType="AssetsHistory.Store.Asset_History" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Asset_History">
+          <Key>
+            <PropertyRef Name="Ass_His_ID" />
+          </Key>
+          <Property Name="Ass_His_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ass_ID" Type="int" Nullable="false" />
+          <Property Name="ITRID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ITR_Eff_Date" Type="date" Nullable="false" />
+          <Property Name="Return_Date" Type="date" />
+          <Property Name="Des" Type="ntext" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AssetsHistory" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AssetsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Asset_History" EntityType="AssetsHistory.Asset_History" />
+        </EntityContainer>
+        <EntityType Name="Asset_History">
+          <Key>
+            <PropertyRef Name="Ass_His_ID" />
+          </Key>
+          <Property Name="Ass_His_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ass_ID" Type="Int32" Nullable="false" />
+          <Property Name="ITRID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ITR_Eff_Date" Type="DateTime" Nullable="false" />
+          <Property Name="Return_Date" Type="DateTime" />
+          <Property Name="Des" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AssetsHistoryStoreContainer" CdmEntityContainer="AssetsEntities">
+          <EntitySetMapping Name="Asset_History"><EntityTypeMapping TypeName="AssetsHistory.Asset_History"><MappingFragment StoreEntitySet="Asset_History">
+            <ScalarProperty Name="Ass_His_ID" ColumnName="Ass_His_ID" />
+            <ScalarProperty Name="Ass_ID" ColumnName="Ass_ID" />
+            <ScalarProperty Name="ITRID" ColumnName="ITRID" />
+            <ScalarProperty Name="ITR_Eff_Date" ColumnName="ITR_Eff_Date" />
+            <ScalarProperty Name="Return_Date" ColumnName="Return_Date" />
+            <ScalarProperty Name="Des" ColumnName="Des" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AssetsHistory">
+        <EntityTypeShape EntityType="AssetsHistory.Asset_History" Width="1.5" PointX="0.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

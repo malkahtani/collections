@@ -1,0 +1,30 @@
+﻿@model Assets.Models.Asset_Type
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Asset_Type</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ass_Typ)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ass_Typ)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ass_Typ_Des)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ass_Typ_Des)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Ass_Typ_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

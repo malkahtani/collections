@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+   <%= Html.Telerik().StyleSheetRegistrar().DefaultGroup(group => group.Add("telerik.common.min.css").Add("telerik.vista.min.css")) %>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+   <asp:ContentPlaceHolder runat="server" id="headerPlaceHolder" />
+
+</head>
+
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                
+                <img alt="" width="100" height="100" src="Content/ise-1.gif" /></div>
+                <div id="title_1">
+                <h1>ISE Electronic Test Center</h1>
+            </div>
+              
+            <div id="logindisplay">
+                <% Html.RenderPartial("LogOnUserControl"); %>
+            </div> 
+            
+            <div id="menucontainer">
+            
+                <ul id="menu">              
+                    <% /*<li><%: Html.ActionLink("Home", "Index", "Home")</li>
+                         <li><%: Html.ActionLink("About", "About", "Home")</li>*/ %>
+
+                    <li><%: Html.ActionLink("Tests", "Index", "Tests")%></li>
+                     <li><%: Html.ActionLink("Candidate", "Index", "Candidate")%></li>
+                     <li><%: Html.ActionLink("Temporary Test Results", "Index", "TempResult")%></li>
+                     <li><%: Html.ActionLink("Questions", "Index", "Questions")%></li>
+                     <li><%: Html.ActionLink("Result", "Index", "Result")%></li>
+                     <li><%: Html.ActionLink("Marks", "Index", "Marks")%></li>
+                     
+
+                    
+
+                     
+                   
+                </ul>
+            
+            </div>
+        </div>
+
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+    <%= Html.Telerik().ScriptRegistrar() %>
+  
+</body>
+</html>

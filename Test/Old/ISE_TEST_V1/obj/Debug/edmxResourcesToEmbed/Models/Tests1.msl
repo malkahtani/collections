@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISE_TEST_1ModelStoreContainer" CdmEntityContainer="Tests">
+    <EntitySetMapping Name="Tests">
+      <EntityTypeMapping TypeName="ISE_TEST_1Model.Test">
+        <MappingFragment StoreEntitySet="Test">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="N_Q_TF" ColumnName="N_Q_TF" />
+          <ScalarProperty Name="N_Q_MCSA" ColumnName="N_Q_MCSA" />
+          <ScalarProperty Name="N_Q_MCMA" ColumnName="N_Q_MCMA" />
+          <ScalarProperty Name="N_Q_FGS" ColumnName="N_Q_FGS" />
+          <ScalarProperty Name="N_Q_FGI" ColumnName="N_Q_FGI" />
+          <ScalarProperty Name="N_Q_MT" ColumnName="N_Q_MT" />
+          <ScalarProperty Name="N_Q_SA" ColumnName="N_Q_SA" />
+          <ScalarProperty Name="N_Q_EA" ColumnName="N_Q_EA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

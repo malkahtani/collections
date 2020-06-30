@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISE_TEST_1Model5" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="QTEntities12" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Q_T_R" EntityType="ISE_TEST_1Model5.Q_T_R" />
+  </EntityContainer>
+  <EntityType Name="Q_T_R">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Q_ID" Type="Int32" Nullable="false" />
+    <Property Name="T_ID" Type="Int32" Nullable="false" />
+    <Property Name="Q_Type" Type="Int16" Nullable="false" />
+  </EntityType>
+</Schema>

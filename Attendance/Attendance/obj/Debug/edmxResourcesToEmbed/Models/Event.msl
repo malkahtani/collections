@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BioStarModelStoreContainer" CdmEntityContainer="EventEntities">
+    <EntitySetMapping Name="TB_EVENT_LOG">
+      <EntityTypeMapping TypeName="BioStarModel.TB_EVENT_LOG">
+        <MappingFragment StoreEntitySet="TB_EVENT_LOG">
+          <ScalarProperty Name="nEventLogIdn" ColumnName="nEventLogIdn" />
+          <ScalarProperty Name="nDateTime" ColumnName="nDateTime" />
+          <ScalarProperty Name="nReaderIdn" ColumnName="nReaderIdn" />
+          <ScalarProperty Name="nEventIdn" ColumnName="nEventIdn" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="nIsLog" ColumnName="nIsLog" />
+          <ScalarProperty Name="nTNAEvent" ColumnName="nTNAEvent" />
+          <ScalarProperty Name="nIsUseTA" ColumnName="nIsUseTA" />
+          <ScalarProperty Name="nType" ColumnName="nType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

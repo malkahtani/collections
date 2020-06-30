@@ -1,0 +1,88 @@
+﻿@model Assets.Models.AssetHistory
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>AssetHistory</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LocationID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LocationID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ITRID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ITRID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Replacement)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Replacement)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AssetType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AssetType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AuthorizedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AuthorizedBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OwnerName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OwnerName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmployeeID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmployeeID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OwnerState)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OwnerState)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TimeStamp)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TimeStamp)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

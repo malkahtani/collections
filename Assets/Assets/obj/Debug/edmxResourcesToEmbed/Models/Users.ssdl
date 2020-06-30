@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetManagementNewModel5.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AssetManagementNewModel5StoreContainer">
+    <EntitySet Name="User" EntityType="AssetManagementNewModel5.Store.User" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="AuthorizedBy" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="LocationID" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="OwnerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExternalEmployee" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+</Schema>

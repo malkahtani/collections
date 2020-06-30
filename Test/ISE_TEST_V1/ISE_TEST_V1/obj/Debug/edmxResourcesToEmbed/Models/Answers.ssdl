@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISE_TEST_1Model6.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ISE_TEST_1Model6StoreContainer">
+    <EntitySet Name="Answers" EntityType="ISE_TEST_1Model6.Store.Answers" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PID" Type="int" />
+    <Property Name="Text" Type="text" />
+    <Property Name="Q_ID" Type="int" Nullable="false" />
+    <Property Name="is_Right" Type="bit" />
+    <Property Name="A_Order" Type="smallint" />
+    <Property Name="value" Type="int" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ATTModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ATTModel1StoreContainer">
+    <EntitySet Name="Leave" EntityType="ATTModel1.Store.Leave" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Leave">
+    <Key>
+      <PropertyRef Name="L_ID" />
+    </Key>
+    <Property Name="L_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LT" Type="int" Nullable="false" />
+    <Property Name="Emp_Id" Type="int" Nullable="false" />
+    <Property Name="DFrom" Type="date" Nullable="false" />
+    <Property Name="DTo" Type="date" Nullable="false" />
+  </EntityType>
+</Schema>

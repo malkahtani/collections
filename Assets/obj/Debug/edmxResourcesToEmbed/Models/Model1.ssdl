@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AssetsModelStoreContainer">
+    <EntitySet Name="Check_In" EntityType="AssetsModel.Store.Check_In" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Check_In">
+    <Key>
+      <PropertyRef Name="IN_Log_ID" />
+    </Key>
+    <Property Name="IN_Log_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Check_in" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="N_ID" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

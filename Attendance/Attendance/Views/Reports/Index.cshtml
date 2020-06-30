@@ -1,0 +1,225 @@
+﻿@model IEnumerable<Attendance.Models.User_R>
+
+@{
+    ViewBag.Title = "Attendance Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 0;
+    string bgcolor = "";
+    string tempcolor = bgcolor;
+    decimal h = 0;
+    decimal m = 0;
+    string mread = "";
+    string time = "";
+    int indexd = 0;
+    
+}
+
+<h2>Attendance Report</h2>
+
+
+    <table>
+    <tr>
+        <th>Best Attender</th>
+        <th>Worst Attender</th>
+    </tr>
+    <tr>
+    
+    <td>
+    <table><tr><td>
+    @Model.Last().Batt.name
+    </td></tr>
+    <tr><td><p>Staff Number:
+    @Model.Last().Batt.id
+    </p></td></tr>
+    @{
+        h = Math.Floor(Model.Last().Batt.hours);
+        m = (Model.Last().Batt.hours - Math.Floor(Model.Last().Batt.hours)) * 60;
+
+
+        if (decimal.ToDouble(m) < 9.55)
+        {
+            mread = "0" + m.ToString("f0");
+        }
+        else
+        {
+            mread = m.ToString("f0");
+        }
+
+
+        time = h.ToString() + ":" + mread;
+           }
+    <tr><td><p>TotaL Hours:
+    @time
+    </p></td></tr></table>
+    </td>
+    <td>
+    <table><tr><td>
+    @Model.Last().Watt.name
+    </td></tr>
+    <tr><td><p>Staff Number:
+    @Model.Last().Watt.id
+    </p></td></tr>
+    @{
+        h = Math.Floor(Model.Last().Watt.hours);
+        m = (Model.Last().Watt.hours - Math.Floor(Model.Last().Watt.hours)) * 60;
+
+
+        if (decimal.ToDouble(m) < 9.55)
+        {
+            mread = "0" + m.ToString("f0");
+        }
+        else
+        {
+            mread = m.ToString("f0");
+        }
+
+
+        time = h.ToString() + ":" + mread;
+           }
+    <tr><td><p>TotaL Hours:
+    @time
+    </p></td></tr></table>
+    </td>
+    
+    </tr>
+</table>
+<hr />
+<table>
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    
+      if (i %2 != 0){
+
+          bgcolor = "efeeef";
+      tempcolor = bgcolor;
+      }
+      else{
+          bgcolor = "efeeef";
+      tempcolor = bgcolor;
+      }
+    i++;
+    
+       <tr style="background: #@bgcolor;">
+       <td >
+        <table>
+        <tr>
+        <th>Name</th>
+        <th>Staff Number</th>
+        </tr>
+        <tr>
+        <td>@item.name</td>
+        <td>@item.id</td>
+        </tr>
+        </table>
+        </td>
+        </tr>      
+        <tr><td>
+        <table style="border-spacing: 2px;">
+        <tr style="background: #@bgcolor;">
+        <th> Attendance</th>
+        </tr>
+        <tr style="background: #@bgcolor;">
+        <th> Day </th>
+        <th> Hours </th>
+        <th> Attendance Type </th>
+        <th> &nbsp;&nbsp;Time Log Entrance </th>
+        <th> Time Log Exit </th>
+        </tr>
+        
+        
+      
+    @foreach (var att in item.attendnace)
+    {
+
+        if (att.CheckedInOrOut)
+        {
+            if (!bgcolor.Contains("FFCCCC"))
+            {
+                bgcolor = tempcolor;
+            }
+            bgcolor = "FFCCCC";
+        }
+        else
+        {
+            if (bgcolor.Contains("FFCCCC"))
+            {
+                bgcolor = tempcolor;
+            }
+        }
+         {
+            h = Math.Floor(att.hours);
+            m = (att.hours - Math.Floor(att.hours)) * 60;
+            
+
+            if (decimal.ToDouble(m) < 9.55)
+            {
+                mread = "0" + m.ToString("f0");
+            }
+            else
+            {
+                 mread = m.ToString("f0");
+            }
+            
+             
+            time = h.ToString() + ":" + mread;
+           }
+        <tr style="background: #@bgcolor;" >
+        <td>@att.day</td>
+        <td>@time</td>
+        <td>@att.Type</td>
+        <td><table style="border-spacing: 0; border-collapse:collapse ;vertical-align: top;">
+       
+    @foreach (var inlog in att.CheckInLog)
+    {
+        
+          <tr  style="border-spacing: 0; border-collapse:collapse ; vertical-align: top;"><td><p>&nbsp;&nbsp;Log In: @inlog</p></td></tr>
+        
+        
+  
+    }
+    
+        </table></td>
+        <td><table style="border-spacing: 0; border-collapse:collapse ; vertical-align: top;">
+   @foreach (var outlog in att.CheckoutLog)
+   {
+      
+          <tr style="border-spacing: 0; border-collapse:collapse ; vertical-align: top;" ><td><p>Log Out: @outlog</p></td></tr>   
+      
+   }
+   
+        </table></td>
+        
+         </tr>
+}  
+@{
+            h = Math.Floor(item.total_hours);
+            m = (item.total_hours - Math.Floor(item.total_hours)) * 60;
+            
+
+            if (decimal.ToDouble(m) < 9.55)
+            {
+                mread = "0" + m.ToString("f0");
+            }
+            else
+            {
+                 mread = m.ToString("f0");
+            }
+            
+             
+            time = h.ToString() + ":" + mread;
+           }
+    <tr><td style="background: #FFFFCC;"> Total Hours = @time</td></tr>
+       </table>
+       
+           <hr />
+    </td>
+       </tr> 
+ }
+ 
+    </table>
+
+ 
